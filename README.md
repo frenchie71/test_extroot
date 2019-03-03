@@ -1,7 +1,7 @@
 # test_extroot
 script to test, fix and mount extroot overlay on OpenWrt routers
 
-What is it?
+# What is it?
 
 OpenWrt supports mounting the root overlay drive on an external USB Stick. 
 By doing that you may use a newer OpenWrt version with additional software (such as Mosquitto, Fhem or Dovecot) even though your router only has let's say 8 MB Storage.
@@ -25,13 +25,13 @@ So you may find yourself in a situation where you had a working overlay extroot 
 
 The purpose of this script is to fix some of these conditions
 
-How to use it?
+# How to use it?
 
 Just copy the script to let's say /usr/bin on your internal AND external overlay (i.e. boot without the stick, copy it into /usr/bin, then mount the stick and copy it to <mountpoint>/upper/usr/bin on the stick)
   
 Then add a line to your /etc/rc.local file calling the script, e.g.
 
-# call the extroot check script
+#call the extroot check script
 /usr/bin/test_extroot.sh
 
 That's it - however be aware that this version contains some specifics such as
